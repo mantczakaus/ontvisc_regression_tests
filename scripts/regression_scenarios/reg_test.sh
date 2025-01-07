@@ -8,6 +8,7 @@ reg_dir=PATH_TO_FOLDER
 module load java
 module load nextflow
 module load singularity
+module load python
 
 # do not change the following
 today=$(date +'%Y%m%d')

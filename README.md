@@ -1,11 +1,12 @@
-# Regression tests for the ONTViSC pipeline
+# Regression tests for the [ONTViSc pipeline](https://github.com/eresearchqut/ontvisc)
+
 
 ## Prerequisites
 You will need:
-- java
-- nextflow
-- singularity
-- python with pytest
+- Java
+- [Nextflow](https://www.nextflow.io/docs/latest/index.html)
+- Singularity
+- Python with [pytest](https://docs.pytest.org/en/stable/getting-started.html)
 
 # Modify
 ## conf/nextflow.config
@@ -28,3 +29,8 @@ This needs to be adjusted according to what is available in your environment. Yo
 
 ## scripts/run_regression_scenarios_and_verify_with_pytest.sh
 Change in the same way as 'run_reg_test_and_verify_with_pytest.sh'
+
+## Authors
+Magdalena Antczak (QCIF/QUT)
+Marie-Emilie Gauthier (QUT)
+Sonam Wangmo (JCU)
