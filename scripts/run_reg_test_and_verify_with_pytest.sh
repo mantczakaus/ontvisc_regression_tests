@@ -11,8 +11,4 @@ execute_scenario(){
 }
 
 # execute_scenario reg_test v1.3 -resume
-execute_scenario reg_01 main ' '
-execute_scenario reg_02 main ' '
-execute_scenario reg_03 main ' '
-execute_scenario reg_04 main ' '
-execute_scenario reg_05 main ' '
+execute_scenario reg_test main ' '
