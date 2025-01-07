@@ -1,0 +1,15 @@
+.
+./test
+./test/assembly
+./test/assembly/blast_to_ref
+./test/assembly/blast_to_ref/test_blastn_reference_vs_canu_assembly.txt
+./test/assembly/canu
+./test/assembly/canu/test_canu.log
+./test/assembly/canu/test_canu_assembly.fasta
+./test/preprocessing
+./test/preprocessing/test_preprocessed.fastq.gz
+./test/qc
+./test/qc/nanoplot
+./test/qc/nanoplot/test_raw_LengthvsQualityScatterPlot_dot.html
+./test/qc/nanoplot/test_raw_NanoPlot-report.html
+./test/qc/nanoplot/test_raw_NanoStats.txt
