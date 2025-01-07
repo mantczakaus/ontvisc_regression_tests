@@ -1,5 +1,5 @@
 # Regression tests for the [ONTViSc pipeline](https://github.com/eresearchqut/ontvisc)
-
+## TO DO WHAT THE TESTS ARE AND WHY WE NEED THEM
 
 ## Prerequisites
 You will need:
@@ -34,3 +34,5 @@ Change in the same way as 'run_reg_test_and_verify_with_pytest.sh'
 Magdalena Antczak (QCIF/QUT)
 Marie-Emilie Gauthier (QUT)
 Sonam Wangmo (JCU)
+
+## TO DO CITE
