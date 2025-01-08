@@ -38,8 +38,10 @@ This needs to be adjusted according to what is available in your environment. Yo
 
 ## Run
 `cd PATH_TO_FOLDER` (path to the folder to which you cloned the tests) <br>
-`cd ontvisc_regression_tests/scripts`
-`bash run_reg_test_and_verify_with_pytest.sh`
+```
+cd ontvisc_regression_tests/scripts
+bash run_reg_test_and_verify_with_pytest.sh
+```
 
 # Execute remaining test scenarios
 
