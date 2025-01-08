@@ -1,5 +1,64 @@
 # Regression tests for the [ONTViSc pipeline](https://github.com/eresearchqut/ontvisc)
-## TO DO WHAT THE TESTS ARE AND WHY WE NEED THEM
+TO DO WHAT THE TESTS ARE AND WHY WE NEED THEM
+## Test scenarios
+
+
+## Verification of results
+### test_output_files(baseline_fold, results_fold, date)
+- Purpose: Tests if the generated files match the baseline.
+- Passed: When the generated files list matches the baseline files list.
+- Failed: When there are missing or additional files compared to the baseline.
+
+### test_error(log_fold, date, scenario)
+- Purpose: Tests if the error file is empty.
+- Passed: When the error file is empty.
+- Failed: When the error file contains any errors.
+
+### test_qcreport(baseline_fold, results_fold, date, file_type)
+- Purpose: Compares a baseline QC report with a generated QC report to determine if they match.
+- Passed: When the generated QC report matches the baseline QC report.
+- Failed: When the generated QC report does not match the baseline QC report.
+
+### test_homl_search_blastn(baseline_fold, results_fold, sample, date, mode, blast_results_fold, file_name, message, print_if_failed)
+- Purpose: Compares the baseline read classification file with the generated read classification file to determine if they match.
+- Passed: When the generated read classification file matches the baseline file.
+- Failed: When the generated read classification file does not match the baseline file.
+
+### test_read_class_kaiju(baseline_fold, results_fold, sample, date)
+- Purpose: Checks the Kaiju summary viral filtered file for specific field values.
+- Passed: When the specific field values in the generated file match the expected values.
+- Failed: When the specific field values in the generated file do not match the expected values.
+- Fields compared:
+  - Percent of reads
+  - Number of reads
+  - Taxon ID
+  - Taxon name
+
+### test_kraken(baseline_fold, results_fold, sample, date)
+- Purpose: Compares the baseline bracken report viral filtered file with the generated file to determine if they match.
+- Passed: When the generated bracken report matches the baseline report.
+- Failed: When the generated bracken report does not match the baseline report.
+
+### test_read_class_html_report(baseline_fold, results_fold, sample, date, message)
+- Purpose: Compares the baseline read classification report with the generated read classification report to determine if they match.
+- Passed: When the generated read classification report matches the baseline report.
+- Failed: When the generated read classification report does not match the baseline report.
+
+### test_blast_ref_vs_canu_assmbl(baseline_fold, results_fold, sample, date)
+- Purpose: Checks the BLASTN reference vs assembly file for specific field values.
+- Passed: When the specific field values in the generated file match the expected values.
+- Failed: When the specific field values in the generated file do not match the expected values.
+- Fields compared:
+  - Reference
+  - Length
+  - Identity
+  - E-value
+
+### test_mapping_coverage(baseline_fold, results_fold, sample, date)
+- Purpose: Compares the baseline coverage file with the generated file to determine if they match.
+- Passed: When the generated coverage file matches the baseline file.
+- Failed: When the generated coverage file does not match the baseline file.
+
 
 # Prerequisites
 You will need:
@@ -13,6 +72,7 @@ git clone https://github.com/mantczakaus/ontvisc_regression_tests.git
 cd ontvisc_regression_tests
 
 # Test the `test` config first
+Run this test case on its own first. It will allow you to make sure that everything is set up correctly and to download the ONTViSc pipeline into your Nextflow `assets` folder without any conflicts.
 
 ## Modify
 Modify the following files according to the specified instructions.
@@ -47,8 +107,8 @@ bash run_reg_test_and_verify_with_pytest.sh
 
 ## 
 Investigate output
-1) Check if the ONTViSc pipeline run successfully. In the folder `ontvisc_regression_tests/execution/reg_test`, check the files `.nextflow.log`, `reg_test_<date_of_the_execution>.out` and `reg_test_<date_of_the_execution>.err`.
-2) If the pipeline is completed, go to `ontvisc_regression_tests/execution/reg_test/results` and look for a file `results_verification_<date_of_the_execution>.txt`. This is a report showing if generated output match the expected output (folder `baselines`)
+Check if the ONTViSc pipeline run successfully. In the folder `ontvisc_regression_tests/execution/reg_test`, check the files `.nextflow.log`, `reg_test_<date_of_the_execution>.out` and `reg_test_<date_of_the_execution>.err`. <br><br>
+If the pipeline is completed, go to `ontvisc_regression_tests/execution/reg_test/results` and look for a file `results_verification_<date_of_the_execution>.txt`. This is a report showing if generated output match the expected output (folder `baselines`). Below an example of the output <br>
 
 # Execute remaining test scenarios
 
