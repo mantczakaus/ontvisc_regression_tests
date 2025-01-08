@@ -1,7 +1,7 @@
 #!/bin/bash -l
 
 # Change `PATH_TO_FOLDER` to the folder to which you cloned the tests 
-reg_dir=PATH_TO_FOLDER
+reg_dir=PATH_TO_FOLDER/ontvisc_regression_tests
 
 # Load the necessary modules. The following commands need to be adjusted according to what is available in your environment. 
 # You may need to specify versions, some of the programs may be available without the need to load them, etc.
