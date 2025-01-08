@@ -111,6 +111,14 @@ Check if the ONTViSc pipeline run successfully. In the folder `ontvisc_regressio
 If the pipeline is completed, go to `ontvisc_regression_tests/execution/reg_test/results` and look for a file `results_verification_<date_of_the_execution>.txt`. This is a report showing if generated output match the expected output (folder `baselines`). Below an example of the output <br>
 ![Example output reg_test failed](images/output_reg_test_failed.png)
 
+`============================= test session starts ==============================` indicates the start of the pytest session, including the platform, Python version, pytest version, and other relevant information. <br>
+`collecting ... collected 11 items / 8 deselected / 3 selected` hows the number of test items collected and how many were selected or deselected for this run. <br>
+The next section shows the results of specific tests. If they failed, it provides details about the specific failure and/or a message indicating where to check for errors. <br>
+`=================================== FAILURES ===================================` provides detailed information about the failures and shows the assertion errors. <br>
+`=========================== short test summary info ============================` provides a short summary of the test results, lists the failed tests and their respective assertion errors. <br>
+`================== 2 failed, 1 passed, 8 deselected in 0.36s ===================` provides a final summary of the test results, including the number of failed, passed, and deselected tests, as well as the total time taken for the tests.
+
+
 # Execute remaining test scenarios
 
 ## Modify
