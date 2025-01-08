@@ -31,8 +31,8 @@ This needs to be adjusted according to what is available in your environment. Yo
 Change in the same way as 'run_reg_test_and_verify_with_pytest.sh'
 
 ## Authors
-Magdalena Antczak (QCIF/QUT)
-Marie-Emilie Gauthier (QUT)
-Sonam Wangmo (JCU)
+- Magdalena Antczak (QCIF/QUT)
+- Marie-Emilie Gauthier (QUT)
+- Sonam Wangmo (JCU)
 
 ## TO DO CITE
