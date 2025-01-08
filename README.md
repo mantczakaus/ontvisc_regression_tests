@@ -109,6 +109,7 @@ bash run_reg_test_and_verify_with_pytest.sh
 Investigate output
 Check if the ONTViSc pipeline run successfully. In the folder `ontvisc_regression_tests/execution/reg_test`, check the files `.nextflow.log`, `reg_test_<date_of_the_execution>.out` and `reg_test_<date_of_the_execution>.err`. <br><br>
 If the pipeline is completed, go to `ontvisc_regression_tests/execution/reg_test/results` and look for a file `results_verification_<date_of_the_execution>.txt`. This is a report showing if generated output match the expected output (folder `baselines`). Below an example of the output <br>
+![Example output reg_test failed](images/output_reg_test_failed.png)
 
 # Execute remaining test scenarios
 
