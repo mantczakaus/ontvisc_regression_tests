@@ -98,15 +98,14 @@ module load python
 ```
 This needs to be adjusted according to what is available in your environment. You may need to specify versions, some of the programs may be available without the need to load them, etc.
 
-## Run 
+## Run
 ```
 cd PATH_TO_FOLDER #path to the folder to which you cloned the tests
 cd ontvisc_regression_tests/scripts
 bash run_reg_test_and_verify_with_pytest.sh
 ```
 
-## 
-Investigate output
+## Investigate output
 Check if the ONTViSc pipeline run successfully. In the folder `ontvisc_regression_tests/execution/reg_test`, check the files `.nextflow.log`, `reg_test_<date_of_the_execution>.out` and `reg_test_<date_of_the_execution>.err`. <br><br>
 If the pipeline is completed, go to `ontvisc_regression_tests/execution/reg_test/results` and look for a file `results_verification_<date_of_the_execution>.txt`. This is a report showing if generated output match the expected output (folder `baselines`). Below an example of the output <br>
 ![Example output reg_test failed](images/output_reg_test_failed.png) <br>
@@ -118,18 +117,12 @@ The next section shows the results of specific tests. If they failed, it provide
 `=========================== short test summary info ============================` provides a short summary of the test results, lists the failed tests and their respective assertion errors. <br><br>
 `================== 2 failed, 1 passed, 8 deselected in 0.36s ===================` provides a final summary of the test results, including the number of failed, passed, and deselected tests, as well as the total time taken for the tests.
 
-
-# Execute remaining test scenarios
-
-## Modify
-Modify the following files according to the specified instructions.
-
-### scripts/run_regression_scenarios_and_verify_with_pytest.sh
-Change in the same way as 'run_reg_test_and_verify_with_pytest.sh'
-
 # Authors
 - Magdalena Antczak (QCIF/QUT)
 - Marie-Emilie Gauthier (QUT)
 - Sonam Wangmo (JCU)
+
+TO DO NOTE ABOUT PYTEST
+
 
 ## TO DO CITE
