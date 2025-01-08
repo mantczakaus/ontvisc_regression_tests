@@ -98,9 +98,9 @@ module load python
 ```
 This needs to be adjusted according to what is available in your environment. You may need to specify versions, some of the programs may be available without the need to load them, etc.
 
-## Run
-`cd PATH_TO_FOLDER` (path to the folder to which you cloned the tests) 
+## Run 
 ```
+cd PATH_TO_FOLDER #path to the folder to which you cloned the tests
 cd ontvisc_regression_tests/scripts
 bash run_reg_test_and_verify_with_pytest.sh
 ```
