@@ -2,12 +2,13 @@ export PYTEST_ADDOPTS="--color=yes"
 
 scenario=$1
 date=$2
+reg_dir=$3
 
 pytest -v -s -m ${scenario} tests/verify_results_with_pytest.py \
 --date=${date} \
---baseline_fold=PATH_TO_FOLDER/baselines/${scenario} \
---results_fold=PATH_TO_FOLDER/execution/${scenario}/results \
---log_fold=PATH_TO_FOLDER/execution/${scenario}/logs
+--baseline_fold=$reg_dir/baselines/${scenario} \
+--results_fold=$reg_dir/execution/${scenario}/results \
+--log_fold=$reg_dir/execution/${scenario}/logs
 
 
 # Note:

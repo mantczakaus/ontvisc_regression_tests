@@ -31,5 +31,6 @@ nextflow run eresearchqut/ontvisc \
 
 # verify the results
 cd ${reg_dir}/scripts/verify_results_with_pytest
-bash verify_results_with_pytest.sh ${scenario} $today \
-> ${reg_dir}/execution/${scenario}/results/results_verification_$today.txt
+bash verify_results_with_pytest.sh ${scenario} $today ${reg_dir} \
+> ${reg_dir}/execution/${scenario}/results/results_verification_$today.txt \
+
