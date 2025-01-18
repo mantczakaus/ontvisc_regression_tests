@@ -131,12 +131,12 @@ Modify the following files according to the specified instructions.
 
 ### scripts/run_regression_scenarios_and_verify_with_pytest.sh
 
-### scripts/regression_scenarios/reg_&lt;SCENARIO&lt;.sh
+### scripts/regression_scenarios/reg_&lt;SCENARIO&gt;.sh
 Specify directories of the databases, you will need. Depending on scenario, these could be:
 - `PATH_TO_BLAST_DB_FOLDER` (directory where you store the nt database)
 See more about which databases you will need in the [ONTViSc guide](https://github.com/eresearchqut/ontvisc?tab=readme-ov-file#installing-the-required-indexes-and-references).
 
-### samplesheets/<SCENARIO>.csv
+### samplesheets/&lt;SCENARIO&gt;.csv
 Change `PATH_TO_FOLDER` to the folder to which you cloned the tests.
 
 ### 
