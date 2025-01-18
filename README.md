@@ -126,6 +126,13 @@ The next section shows the results of specific tests. If they failed, it provide
 # Test other scenarios
 Provided you run the `test` config scenario first, you can run the rest of scenarios in parallel.
 
+## Download data
+TO DO
+
+## Download databases 
+TO DO AFTER DESCRIBING SCENARIOS AT THE BEGINNING
+See more about which databases you will need in the [ONTViSc guide](https://github.com/eresearchqut/ontvisc?tab=readme-ov-file#installing-the-required-indexes-and-references).
+
 ## Modify
 Modify the following files according to the specified instructions.
 
@@ -134,7 +141,7 @@ Modify the following files according to the specified instructions.
 ### scripts/regression_scenarios/reg_&lt;SCENARIO&gt;.sh
 Specify directories of the databases, you will need. Depending on scenario, these could be:
 - `PATH_TO_BLAST_DB_FOLDER` (directory where you store the nt database)
-See more about which databases you will need in the [ONTViSc guide](https://github.com/eresearchqut/ontvisc?tab=readme-ov-file#installing-the-required-indexes-and-references).
+
 
 ### samplesheets/&lt;SCENARIO&gt;.csv
 Change `PATH_TO_FOLDER` to the folder to which you cloned the tests.
