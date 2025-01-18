@@ -1,0 +1,257 @@
+
+    <html>
+        <head>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+            <style>body{ margin:0 100; background:whitesmoke; }
+            .collapsible {
+            background-color: #777;
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            }
+            .active, .collapsible:hover {
+            background-color: #555;
+            }
+            .content {
+            padding: 0 18px;
+            display: none;
+            overflow: hidden;
+            background-color: #f1f1f1;
+            }
+            </style>
+        </head>
+
+        <body>
+            <h1>Homology blast results</h1>
+
+            <button type="button" class="collapsible"> Total number of matches to viral species</button>
+            <div class="content">
+                <table class="table table-striped">
+  <thead>
+    <tr style="text-align: right;">
+      <th>species</th>
+      <th>count</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Miscanthus sinensis mosaic virus</td>
+      <td>7</td>
+    </tr>
+  </tbody>
+</table>
+            </div>
+
+            <button type="button" class="collapsible"> Total number of matches to viral species (filtered) </button>
+            <div class="content">
+                <p>Only blast viral matches which show >90% query coverage for NCBI and >95% query coverage for local viral database were considered here.</p>
+                <table class="table table-striped">
+  <thead>
+    <tr style="text-align: right;">
+      <th>species</th>
+      <th>count</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Miscanthus sinensis mosaic virus</td>
+      <td>5</td>
+    </tr>
+  </tbody>
+</table>
+            </div>
+
+            <button type="button" class="collapsible"> Total number of matches to specific viral accession number </h2></button>
+            <div class="content">
+                <table class="table table-striped">
+  <thead>
+    <tr style="text-align: right;">
+      <th>species</th>
+      <th>sacc</th>
+      <th>count</th>
+      <th>qseqid</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Miscanthus sinensis mosaic virus</td>
+      <td>OL312763</td>
+      <td>7</td>
+      <td>[contig_1, contig_4, contig_5, contig_6, contig_7, contig_8, contig_9]</td>
+    </tr>
+  </tbody>
+</table>
+            </div>
+
+            <button type="button" class="collapsible"> Top viral match per species based on evalue</h2></button>
+            <div class="content">
+                <p>If for a given species, more than one viral match share the same top evalue, then query length (qlen) is considered next</p>
+                <table class="table table-striped">
+  <thead>
+    <tr style="text-align: right;">
+      <th>species</th>
+      <th>qseqid</th>
+      <th>qlen</th>
+      <th>sacc</th>
+      <th>stitle</th>
+      <th>slen</th>
+      <th>pident</th>
+      <th>sstrand</th>
+      <th>evalue</th>
+      <th>bitscore</th>
+      <th>qcovs</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Miscanthus sinensis mosaic virus</td>
+      <td>contig_7</td>
+      <td>6148</td>
+      <td>OL312763</td>
+      <td>Miscanthus sinensis mosaic virus isolate WA, complete genome</td>
+      <td>9604</td>
+      <td>99.818</td>
+      <td>minus</td>
+      <td>0.0</td>
+      <td>6050</td>
+      <td>100</td>
+    </tr>
+  </tbody>
+</table>
+            </div>
+
+            <button type="button" class="collapsible"> Top viral match per species based on query length (qlen) </h2></button>
+            <div class="content">
+                <p>If for a given species, more than one viral match share the same top query length, then evalue is considered next</p>
+                <table class="table table-striped">
+  <thead>
+    <tr style="text-align: right;">
+      <th>species</th>
+      <th>qseqid</th>
+      <th>qlen</th>
+      <th>sacc</th>
+      <th>stitle</th>
+      <th>slen</th>
+      <th>pident</th>
+      <th>sstrand</th>
+      <th>evalue</th>
+      <th>bitscore</th>
+      <th>qcovs</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Miscanthus sinensis mosaic virus</td>
+      <td>contig_7</td>
+      <td>6148</td>
+      <td>OL312763</td>
+      <td>Miscanthus sinensis mosaic virus isolate WA, complete genome</td>
+      <td>9604</td>
+      <td>99.818</td>
+      <td>minus</td>
+      <td>0.0</td>
+      <td>6050</td>
+      <td>100</td>
+    </tr>
+  </tbody>
+</table>
+            </div>
+
+            <button type="button" class="collapsible"> Top viral match per species based on % identity </h2></button>
+            <div class="content">
+                <p>If for a given species, more than one viral match share the same percent identity, then evalue is considered next</p>
+                <table class="table table-striped">
+  <thead>
+    <tr style="text-align: right;">
+      <th>species</th>
+      <th>qseqid</th>
+      <th>qlen</th>
+      <th>sacc</th>
+      <th>stitle</th>
+      <th>slen</th>
+      <th>pident</th>
+      <th>sstrand</th>
+      <th>evalue</th>
+      <th>bitscore</th>
+      <th>qcovs</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Miscanthus sinensis mosaic virus</td>
+      <td>contig_7</td>
+      <td>6148</td>
+      <td>OL312763</td>
+      <td>Miscanthus sinensis mosaic virus isolate WA, complete genome</td>
+      <td>9604</td>
+      <td>99.818</td>
+      <td>minus</td>
+      <td>0.0</td>
+      <td>6050</td>
+      <td>100</td>
+    </tr>
+  </tbody>
+</table>
+            </div>
+
+            <button type="button" class="collapsible"> Top viral match per species based on bitscore </h2></button>
+            <div class="content">
+                <p>If for a given species, more than one viral match share the same bitscore, then evalue is considered next</p>
+                <table class="table table-striped">
+  <thead>
+    <tr style="text-align: right;">
+      <th>species</th>
+      <th>qseqid</th>
+      <th>qlen</th>
+      <th>sacc</th>
+      <th>stitle</th>
+      <th>slen</th>
+      <th>pident</th>
+      <th>sstrand</th>
+      <th>evalue</th>
+      <th>bitscore</th>
+      <th>qcovs</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Miscanthus sinensis mosaic virus</td>
+      <td>contig_7</td>
+      <td>6148</td>
+      <td>OL312763</td>
+      <td>Miscanthus sinensis mosaic virus isolate WA, complete genome</td>
+      <td>9604</td>
+      <td>99.818</td>
+      <td>minus</td>
+      <td>0.0</td>
+      <td>6050</td>
+      <td>100</td>
+    </tr>
+  </tbody>
+</table>
+            </div>
+
+        <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+            content.style.display = "none";
+            } else {
+            content.style.display = "block";
+            }
+        });
+        }
+        </script>
+
+        </body>
+    </html>

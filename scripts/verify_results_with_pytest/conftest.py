@@ -35,11 +35,11 @@ def cmdline_args(request):
 # Dictionary to map markers to sample names
 scenario_to_sample = {
     'reg_test': 'test',
-    'reg_01': 'MT011',
-    'reg_02': 'ET300',
-    'reg_03': 'MT010',
-    'reg_04': 'MT483',
-    'reg_05': 'MT483',
+    'reg_01': 'REG01',
+    'reg_02': 'REG02',
+    'reg_03': 'MsiMV',
+    'reg_04': 'REG04',
+    'reg_05': 'REG05',
 }
 
 

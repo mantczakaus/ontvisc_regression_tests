@@ -68,8 +68,11 @@ You will need:
 - Python with [pytest](https://docs.pytest.org/en/stable/getting-started.html)
 
 # Clone the repository
+'''
 git clone https://github.com/mantczakaus/ontvisc_regression_tests.git
 cd ontvisc_regression_tests
+'''
+TO DO note on PATH_TO_FOLDER
 
 # Test the `test` config first
 Run this test case on its own first. It will allow you to make sure that everything is set up correctly and to download the ONTViSc pipeline into your Nextflow `assets` folder without any conflicts.
@@ -83,6 +86,7 @@ By default the tests are set up to be submitted to the PBS scheduler `executor =
 
 
 ### scripts/run_reg_test_and_verify_with_pytest.sh
+TO DO change to incorporate changes to other scenarios (e.g. external modules)
 Set `revision` (`main` by default) and `resume` (only two options can be used `-resume` or `' '`).
 Change `PATH_TO_FOLDER` to the folder to which you cloned the tests (variable `execution_dir`).
 By default the tests are set up to be submitted to the PBS scheduler but the analogical command for Slurm is also provided.
@@ -116,6 +120,26 @@ The next section shows the results of specific tests. If they failed, it provide
 `=================================== FAILURES ===================================` provides detailed information about the failures and shows the assertion errors. <br><br>
 `=========================== short test summary info ============================` provides a short summary of the test results, lists the failed tests and their respective assertion errors. <br><br>
 `================== 2 failed, 1 passed, 8 deselected in 0.36s ===================` provides a final summary of the test results, including the number of failed, passed, and deselected tests, as well as the total time taken for the tests.
+
+## TO DO Note on CANU results
+
+# Test other scenarios
+Provided you run the `test` config scenario first, you can run the rest of scenarios in parallel.
+
+## Modify
+Modify the following files according to the specified instructions.
+
+### scripts/run_regression_scenarios_and_verify_with_pytest.sh
+
+### scripts/regression_scenarios/reg_<SCENARIO>.sh
+Specify directories of the databases, you will need. Depending on scenario, these could be:
+- `PATH_TO_BLAST_DB_FOLDER` (directory where you store the nt database)
+See more about which databases you will need in the [ONTViSc guide](https://github.com/eresearchqut/ontvisc?tab=readme-ov-file#installing-the-required-indexes-and-references).
+
+### samplesheets/<SCENARIO>.csv
+Change `PATH_TO_FOLDER` to the folder to which you cloned the tests.
+
+### 
 
 # Authors
 - Magdalena Antczak (QCIF/QUT)
